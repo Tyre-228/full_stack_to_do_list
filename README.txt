@@ -10,6 +10,9 @@ Commit example: "some changes v0.4.2"
 
 Version history:
 
+0.3.1
+An error in users class has been fixed. Method create user(line 50). You don't need command conn.commit().
+
 0.3.0
 Tasks class has been created. The class contains these methods:
 

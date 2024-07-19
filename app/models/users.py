@@ -47,7 +47,6 @@ class Users:
         with psycopg2.connect(**self.config) as conn:
             with conn.cursor() as cursor:
                 cursor.execute(f"INSERT INTO users(name, email, password) VALUES('{name}', '{email}', '{password}');")
-                cursor.commit()
     
     def getId(self, email, password):
         with psycopg2.connect(**self.config) as conn:
