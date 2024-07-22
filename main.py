@@ -1,9 +1,10 @@
-from app.models.users import Users
-from app.models.tasks import Tasks
+from flask import Flask
+from app.routes.users_routes import users
 
-users = Users()
-tasks = Tasks()
 
+app = Flask(__name__)
+
+app.register_blueprint(users, url_prefix="/users")
 
 if __name__ == '__main__':
-    print(tasks.deleteTask(26))
+    app.run(debug=True)
